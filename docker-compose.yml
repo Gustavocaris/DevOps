@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: devopsproject
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./escola.db:/app/escola.db
+
+volumes:
+  db_data:
